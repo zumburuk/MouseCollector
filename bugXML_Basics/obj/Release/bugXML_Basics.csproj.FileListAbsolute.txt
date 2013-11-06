@@ -1,0 +1,4 @@
+E:\c#\MouseCollector\bugXML_Basics\bin\Release\bugXML_Basics.dll
+E:\c#\MouseCollector\bugXML_Basics\bin\Release\bugXML_Basics.pdb
+E:\c#\MouseCollector\bugXML_Basics\obj\Release\bugXML_Basics.dll
+E:\c#\MouseCollector\bugXML_Basics\obj\Release\bugXML_Basics.pdb

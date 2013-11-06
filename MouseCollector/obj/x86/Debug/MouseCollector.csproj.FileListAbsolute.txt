@@ -1,0 +1,19 @@
+C:\Users\Bugra\AppData\Local\Temporary Projects\MouseCollector\bin\Debug\MouseCollector.exe
+C:\Users\Bugra\AppData\Local\Temporary Projects\MouseCollector\bin\Debug\MouseCollector.pdb
+C:\Users\Bugra\AppData\Local\Temporary Projects\MouseCollector\obj\x86\Debug\MouseCollector.Form1.resources
+C:\Users\Bugra\AppData\Local\Temporary Projects\MouseCollector\obj\x86\Debug\MouseCollector.Properties.Resources.resources
+C:\Users\Bugra\AppData\Local\Temporary Projects\MouseCollector\obj\x86\Debug\MouseCollector.csproj.GenerateResource.Cache
+C:\Users\Bugra\AppData\Local\Temporary Projects\MouseCollector\obj\x86\Debug\MouseCollector.exe
+C:\Users\Bugra\AppData\Local\Temporary Projects\MouseCollector\obj\x86\Debug\MouseCollector.pdb
+E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.exe
+E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.pdb
+E:\c#\MouseCollector\MouseCollector\bin\Debug\MouseCollector.exe
+E:\c#\MouseCollector\MouseCollector\bin\Debug\MouseCollector.pdb
+E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.Form1.resources
+E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.Properties.Resources.resources
+E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.csproj.GenerateResource.Cache
+E:\c#\MouseCollector\MouseCollector\bin\Debug\bugXML_Basics.dll
+E:\c#\MouseCollector\MouseCollector\bin\Debug\bugXML_Basics.pdb
+E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.csprojResolveAssemblyReference.cache
+E:\c#\MouseCollector\MouseCollector\bin\Debug\bugMouseTest.dll
+E:\c#\MouseCollector\MouseCollector\bin\Debug\bugMouseTest.pdb

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLBase>
+  <user>bug</user>
+  <taskID>dummy</taskID>
+  <input_device>TouchPad</input_device>
+  <test_screen>1623,985</test_screen>
+  <trail>
+    <point_data>522,793,11/12/2013 2:59:18 AM</point_data>
+    <point_data>515,1314,11/12/2013 2:59:18 AM</point_data>
+    <point_data>1135,1035,11/12/2013 2:59:18 AM</point_data>
+    <point_data>7,72,11/12/2013 2:59:18 AM</point_data>
+    <point_data>534,1120,11/12/2013 2:59:18 AM</point_data>
+  </trail>
+</XMLBase>

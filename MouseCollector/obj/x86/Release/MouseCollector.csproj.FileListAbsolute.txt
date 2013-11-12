@@ -8,3 +8,5 @@ E:\c#\MouseCollector\MouseCollector\obj\x86\Release\MouseCollector.pdb
 E:\c#\MouseCollector\MouseCollector\bin\Release\bugXML_Basics.dll
 E:\c#\MouseCollector\MouseCollector\bin\Release\bugXML_Basics.pdb
 E:\c#\MouseCollector\MouseCollector\obj\x86\Release\MouseCollector.csprojResolveAssemblyReference.cache
+E:\c#\MouseCollector\MouseCollector\bin\Release\bugMouseTest.dll
+E:\c#\MouseCollector\MouseCollector\bin\Release\bugMouseTest.pdb

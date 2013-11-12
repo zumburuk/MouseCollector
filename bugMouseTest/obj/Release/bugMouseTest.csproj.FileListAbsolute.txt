@@ -2,3 +2,6 @@ E:\c#\MouseCollector\bugMouseTest\bin\Release\bugMouseTest.dll
 E:\c#\MouseCollector\bugMouseTest\bin\Release\bugMouseTest.pdb
 E:\c#\MouseCollector\bugMouseTest\obj\Release\bugMouseTest.dll
 E:\c#\MouseCollector\bugMouseTest\obj\Release\bugMouseTest.pdb
+E:\c#\MouseCollector\bugMouseTest\obj\Release\bugMouseTest.csprojResolveAssemblyReference.cache
+E:\c#\MouseCollector\bugMouseTest\bin\Release\bugXML_Basics.dll
+E:\c#\MouseCollector\bugMouseTest\bin\Release\bugXML_Basics.pdb

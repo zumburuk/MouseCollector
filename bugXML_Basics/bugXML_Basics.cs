@@ -6,13 +6,18 @@ using System.Xml;
 
 namespace bugXML_Basics
 {
+    public interface iFileIO
+    {
+        bool LoadFromFile(string FilePath);
+        bool Write2File(string FilePath);
+    }
 
     /// <summary>
     /// This class is intended for simple manipulation of XML object for limited use suitable for our purpose
     /// For cascaded tags, you have to be creative... but remember the motto SMF, keep it simple
     /// That's why class is implemented shallow... going too deep? might be violating the spirit of SMF!
     /// </summary>
-    public class cBaseXML
+    public class cBaseXML: iFileIO
     {
         #region variables
         string blank_xml = @"<?xml version='1.0' encoding='utf-8'?>
@@ -28,6 +33,14 @@ namespace bugXML_Basics
         {
             Reset();
         }
+
+
+        public cBaseXML(string innerXML)
+        {
+            Reset();
+            rootnode.InnerText = innerXML;
+        }
+
         #endregion
 
         #region properties
@@ -119,6 +132,40 @@ namespace bugXML_Basics
             return rootnode.InnerXml;
         }
 
+        #endregion
+
+        #region iFileIO
+        public bool LoadFromFile(string FilePath)
+        {
+            try
+            {
+                // try to load the file
+                if (xdoc != null)
+                {
+                    xdoc.Load(FilePath);
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch { return false; }
+        }
+
+        public bool Write2File(string FilePath)
+        {
+            try 
+            {
+                // try to save the file
+                if (xdoc != null)
+                {
+                    xdoc.Save(FilePath);
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch { return false; }
+        }
         #endregion
     }
 

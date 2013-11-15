@@ -5,10 +5,11 @@
   <input_device>TouchPad</input_device>
   <test_screen>1623,985</test_screen>
   <trail>
-    <point_data>522,793,11/12/2013 2:59:18 AM</point_data>
-    <point_data>515,1314,11/12/2013 2:59:18 AM</point_data>
-    <point_data>1135,1035,11/12/2013 2:59:18 AM</point_data>
-    <point_data>7,72,11/12/2013 2:59:18 AM</point_data>
-    <point_data>534,1120,11/12/2013 2:59:18 AM</point_data>
+    <point_data>497,113,11/14/2013 12:58:18 AM</point_data>
+    <point_data>1182,651,11/14/2013 12:58:18 AM</point_data>
+    <point_data>899,60,11/14/2013 12:58:18 AM</point_data>
+    <point_data>118,1272,11/14/2013 12:58:18 AM</point_data>
+    <point_data>1216,886,11/14/2013 12:58:18 AM</point_data>
   </trail>
+  <test_complete>False</test_complete>
 </XMLBase>

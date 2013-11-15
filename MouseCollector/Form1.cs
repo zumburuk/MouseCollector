@@ -16,27 +16,38 @@ namespace MouseCollector
         public Form1()
         {
             InitializeComponent();
-
+            
             this.WindowState = FormWindowState.Maximized;
             //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 
-            //*/
+            
             bugMouseTestData bm = new bugMouseTestData();
             rtBoxDebug.Text = bm.XML_template;
 
-            bugMouseTestData mTest = new bugMouseTestData("bug", "dummy", 
+            bugMouseTestData mTest = new bugMouseTestData();
+            /*/
+            mTest = new bugMouseTestData("bug", "dummy", 
                 new Size(Screen.AllScreens[0].WorkingArea.Width, Screen.AllScreens[0].WorkingArea.Height), 
                 InputDevices.TouchPad);
             Random r = new Random();
             for (int i = 0; i < 5; i++)
                 mTest.AddTracePoint(new Point(r.Next(0, 1500), r.Next(0, 1500)), DateTime.Now);
-
-            rtBoxDebug.Text = mTest.ToString();
-            if (mTest.Write2File(Application.StartupPath + "//test.xml"))
-                this.Text = "Fine";
+            if (mTest.Write2File(Application.StartupPath + "\\test.xml"))
+                rtBoxDebug.Text = mTest.ToString();
             else
-                this.Text = "Failed to create XML file";
-
+                rtBoxDebug.Text = "Failed to write XML file";
+             
+            //*/
+            
+            //*/
+            if (mTest.LoadFromFile(Application.StartupPath + "\\test.xml"))
+            {
+                // print user
+                rtBoxDebug.Text = mTest.FormattedContent;
+                
+            }
+            else
+                rtBoxDebug.Text = "Failed to read XML file";
             //*/
 
             /*/

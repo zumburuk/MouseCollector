@@ -37,8 +37,9 @@ namespace bugXML_Basics
 
         public cBaseXML(string innerXML)
         {
-            Reset();
-            rootnode.InnerText = innerXML;
+            //Reset();
+            //rootnode.InnerText = innerXML;
+            Reset(innerXML);
         }
 
         #endregion
@@ -93,7 +94,10 @@ namespace bugXML_Basics
         {
             string dt = "";
             XmlNode theNode = rootnode.SelectSingleNode(tag);
-            if (theNode != null) dt = theNode.InnerText;
+            if (theNode != null)
+            {
+                dt = theNode.InnerXml;
+            }
             return dt;
         }
 
@@ -143,6 +147,7 @@ namespace bugXML_Basics
                 if (xdoc != null)
                 {
                     xdoc.Load(FilePath);
+                    rootnode = xdoc.SelectSingleNode("XMLBase");
                     return true;
                 }
                 else

@@ -35,7 +35,7 @@
             // 
             this.rtBoxDebug.Location = new System.Drawing.Point(14, 13);
             this.rtBoxDebug.Name = "rtBoxDebug";
-            this.rtBoxDebug.Size = new System.Drawing.Size(314, 377);
+            this.rtBoxDebug.Size = new System.Drawing.Size(451, 377);
             this.rtBoxDebug.TabIndex = 0;
             this.rtBoxDebug.Text = "";
             // 

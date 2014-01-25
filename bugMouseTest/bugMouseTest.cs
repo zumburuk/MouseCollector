@@ -503,7 +503,7 @@ namespace bugMouseTest
             BorderColor = 3,
             TargetLocation = 4,
             CursorLocation = 5,
-            Size= 6
+            TargetSize= 6
         }
 
         public enum TaskShapes
@@ -512,7 +512,6 @@ namespace bugMouseTest
             Circle = 1,
             Other = 2
         }
-
 
         #region declerations
         private string[] tags = { "taskID", "shape", "backcolor", "bordercolor", "target_location", "cursor_location", "target_size" };
@@ -570,6 +569,7 @@ namespace bugMouseTest
         /// <returns>TaskShape obtained from string, if not a valid string 'other' is returned</returns>
         private TaskShapes GetShape(string strShape)
         {
+            strShape = strShape.Trim();
             TaskShapes theShape = TaskShapes.Other;
             if (strShape == TaskShapes.Circle.ToString()) theShape = TaskShapes.Circle;
             else if (strShape == TaskShapes.Rectangle.ToString()) theShape = TaskShapes.Rectangle;
@@ -614,7 +614,7 @@ namespace bugMouseTest
                 this.target_location.X.ToString() + "," + this.target_location.Y.ToString(), true);
             meXML.Add(tags[(int)TagNames.CursorLocation],
                 this.cursor_location.X.ToString() + "," + this.cursor_location.Y.ToString(), true);          
-            meXML.Add(tags[(int)TagNames.TargetLocation],
+            meXML.Add(tags[(int)TagNames.TargetSize],
                 this.target_size.Width.ToString() + "," + this.target_size.Height.ToString(), true);
             return meXML;
         }
@@ -642,7 +642,7 @@ namespace bugMouseTest
                 // get cursor location
                 this.cursor_location = GetPoint(inXML.NodeData(tags[(int)TagNames.CursorLocation]));
                 // get cursor location
-                this.target_size = GetSize(inXML.NodeData(tags[(int)TagNames.CursorLocation]));
+                this.target_size = GetSize(inXML.NodeData(tags[(int)TagNames.TargetSize]));
                 return true;
             }
             catch
@@ -651,6 +651,14 @@ namespace bugMouseTest
             }
         }
 
+        /// <summary>
+        /// same as XML get
+        /// </summary>
+        /// <returns>the XML content of the test data with all tags except a root node!</returns>
+        public override string ToString()
+        {
+            return this.XML;
+        }
 
         #endregion
 
@@ -669,14 +677,34 @@ namespace bugMouseTest
         #endregion
 
         #region iFileIO
+        /// <summary>
+        /// loads a file from the given full file path
+        /// </summary>
+        /// <param name="FilePath">Full file path of the XML file</param>
+        /// <returns>TRUE if load is successful, FALSE otherwise</returns>
         public bool LoadFromFile(string FilePath)
         {
-            throw new NotImplementedException();
+            try
+            {
+                cBaseXML newTest = new cBaseXML();
+                if (newTest.LoadFromFile(FilePath))
+                {
+                    string innerXML = newTest.ToString();
+                    this.XML = innerXML;
+                    return true;
+                }
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+                return false;
+            }
         }
 
         public bool Write2File(string FilePath)
         {
-            throw new NotImplementedException();
+            return toXML().Write2File(FilePath);
         }
         #endregion
     }

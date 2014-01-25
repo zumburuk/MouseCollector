@@ -25,6 +25,8 @@ namespace MouseCollector
             rtBoxDebug.Text = bm.XML_template;
 
             bugMouseTestData mTest = new bugMouseTestData();
+
+            bugMouseTaskDefinition taskdef = new bugMouseTaskDefinition();
             /*/
             mTest = new bugMouseTestData("bug", "dummy", 
                 new Size(Screen.AllScreens[0].WorkingArea.Width, Screen.AllScreens[0].WorkingArea.Height), 
@@ -39,7 +41,7 @@ namespace MouseCollector
              
             //*/
             
-            //*/
+            /*/
             if (mTest.LoadFromFile(Application.StartupPath + "\\test.xml"))
             {
                 // print user
@@ -65,6 +67,18 @@ namespace MouseCollector
             rtBoxDebug.Text = nxml.ToString();
 
             //*/
+
+            //*/
+            if (taskdef.LoadFromFile(Application.StartupPath + "\\scenarios.xml"))
+                rtBoxDebug.Text = taskdef.ToString();
+            else
+                rtBoxDebug.Text = "Failed to read XML File";
+            if (taskdef.Write2File(Application.StartupPath + "\\scenario_written.xml"))
+                rtBoxDebug.Text = taskdef.ToString();
+            else
+                rtBoxDebug.Text = "Failed to write XML File";
+            //*/
+
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)

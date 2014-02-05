@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XMLBase>
+        <taskID>MediumHard</taskID>
+        <shape> Circle</shape>
+        <backcolor>120,120,120 </backcolor>
+        <bordercolor>0,0,0</bordercolor>
+        <target_location>100,480 </target_location>
+        <cursor_location>1300,480 </cursor_location>
+        <target_size>40,40</target_size>
+
+</XMLBase>

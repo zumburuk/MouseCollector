@@ -4,7 +4,7 @@
         <shape> Circle</shape>
         <backcolor>120,120,120 </backcolor>
         <bordercolor>0,0,0</bordercolor>
-        <target_location>90,50 </target_location>
-        <cursor_location>10,50 </cursor_location>
-        <target_size>15,15</target_size>
+        <target_location>1300,480</target_location>
+        <cursor_location>100,480</cursor_location>
+        <target_size>80,80</target_size>
 </XMLBase>

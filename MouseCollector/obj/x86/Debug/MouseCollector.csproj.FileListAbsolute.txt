@@ -17,3 +17,4 @@ E:\c#\MouseCollector\MouseCollector\bin\Debug\bugXML_Basics.pdb
 E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.csprojResolveAssemblyReference.cache
 E:\c#\MouseCollector\MouseCollector\bin\Debug\bugMouseTest.dll
 E:\c#\MouseCollector\MouseCollector\bin\Debug\bugMouseTest.pdb
+E:\c#\MouseCollector\MouseCollector\obj\x86\Debug\MouseCollector.frmUserName.resources

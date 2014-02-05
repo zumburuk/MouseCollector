@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Drawing;
 using bugXML_Basics;
+using System.Windows.Forms;
 
 namespace bugMouseTest
 {
@@ -660,6 +661,45 @@ namespace bugMouseTest
             return this.XML;
         }
 
+        #endregion
+
+        #region properties
+        public Rectangle TargetBoundingBox
+        {
+            get 
+            {
+                Rectangle scr = Screen.AllScreens[0].WorkingArea;
+                /*/ following is for relative size and location
+                Size tsize = new Size(scr.Width * target_size.Width / 100, scr.Height * target_size.Height / 100);
+                Point tcenter = new Point(
+                    scr.Width * target_location.X / 100 - tsize.Width/2, 
+                    scr.Height * target_location.Y / 100 - tsize.Height/2);
+                //*/
+                //*/ absolute size and location
+                Size tsize = new Size(target_size.Width, target_size.Height);
+                Point tcenter = new Point(
+                    target_location.X - tsize.Width/ 2, 
+                    target_location.Y - tsize.Height / 2
+                    );
+                //*/
+                return new Rectangle(tcenter, tsize);
+            }
+        }
+
+        public Point CursorLocation
+        {
+            get
+            {
+                Rectangle scr = Screen.AllScreens[0].WorkingArea;
+                return new Point(scr.Width * cursor_location.X / 100, scr.Height * cursor_location.Y / 100);
+            }
+        }
+
+        public TaskShapes Shape { get { return shape; } }
+
+        public Color BackColor { get { return back_color; } }
+
+        public Color BorderColor { get { return border_color; } }
         #endregion
 
         #region iXML
